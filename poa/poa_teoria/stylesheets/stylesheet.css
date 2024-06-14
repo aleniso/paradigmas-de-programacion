@@ -270,3 +270,123 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.page-side-nav {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 3.5rem;
+  left: 1.5rem;
+  border: solid 0.125rem #110f4aad;
+  margin-top: 4rem;
+  border-radius: 0.5rem;
+  max-height: calc(100vh - 6rem);
+  max-width: 16rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  direction: rtl;
+  background-color: #fff;
+}
+
+.page-side-nav::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.page-side-nav::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.page-side-nav::-webkit-scrollbar-thumb {
+  background-color: #110f4ac7;
+  border-radius: 0.3rem;
+}
+
+.page-side-nav a {
+  display: block;
+  padding: 0.75rem;
+  position: relative;
+  direction: ltr;
+}
+
+.page-side-nav a::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0.75rem;
+  width: 14rem;
+  height: 0.0675rem;
+  background-color: #110f4a52;
+}
+
+.page-side-nav a:last-child::after {
+  content: none;
+}
+
+.page-side-nav a:hover {
+  background-color: #110f4a;
+  color: #e9ebec;
+  opacity: 0.75;
+}
+
+.main-content--with-aside {
+  padding-left: 12rem;
+  margin-top: calc(-100vh + 5rem);
+}
+
+@media screen and (max-width: 63.9em) { 
+  .page-side-nav {
+    max-width: calc(100vw - 2rem);
+    max-height: 4rem;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    direction: ltr;
+    top: 0.125rem;
+    left: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .page-side-nav a {
+    white-space: nowrap;
+  }
+
+  .main-content--with-aside {
+    margin-top: 0;
+  }
+
+  .page-side-nav::-webkit-scrollbar {
+    height: 0.3rem;
+  }
+
+  .page-side-nav a::after {
+    top: 0;
+    left: 100%;
+    width: 0.125rem;
+    height: 90%;
+    background-color: #110f4a52;
+  }
+}
+
+@media screen and (min-width: 64em) and (max-width: 76em){
+  .page-side-nav {
+    max-width: 14rem;
+  }
+
+  .page-side-nav a::after {
+    width: 12rem;
+  }
+    
+  .main-content--with-aside {
+    padding-left: 17rem;
+  }
+}
+
+@media screen and (min-width: 77em){
+  .page-side-nav {
+    left: calc(50vw - 38rem);
+  }
+    
+  .main-content--with-aside {
+    padding-left: 12rem;
+  }
+}
