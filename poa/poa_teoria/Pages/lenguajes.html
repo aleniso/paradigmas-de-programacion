@@ -424,6 +424,10 @@
 
         <img
             src="../Images/EjA.webp?raw=true">
+        <p>Otra caracteristica es que tiene distintos tipos de Advice, <strong>'before'</strong>,
+            <strong><i>'after'</i></strong>, <strong><i>'after returning'</i></strong>,
+            <strong><i>'after throwing'</i> </strong>, y<strong><i>'around'</i></strong>  advice, permitiendo una
+            intervención detallada en los puntos de corte.</p>
         <p align="justify">
             Finalmente, se puede argumentar que es la extensión de lenguaje más usada en cuanto a POA, debido a que es
             una de las más desarrolladas y a que es particularmente fácil de entender y utilizar.
@@ -636,13 +640,20 @@
             <a id="AspectPython" class="anchor" href="#AspectPython" aria-hidden="true"><span aria-hidden="true"
                     class="octicon octicon-link"></span></a>Python</h2>
         <p align="justify">
-            Python no necesita de ningún plug-in a librería para hacer POA. ya que esto lo puede lograr mediante los
-            decorators.
-            Existen algunos proyectos como Aspyct, sin embargo este fue abandonado. El uso mediante decoradores sería de
+            Python no necesita de ningún plug-in o librería para hacer POA. ya que esto lo puede lograr mediante los
+            decorators. El uso mediante decoradores sería de
             la siguiente manera:
 
         </p>
         <img width="500" height="350" src="../Images/python.webp?raw=true" hspace="150"> </img>
+        <p>Sin embargo existen algunas librerias que nos brindan ayuda para este tipo de desarrollo, como por ejemplo:</p>
+        <h3>AspectLib</h3>
+        <p>Aspectlib es una biblioteca que facilita la implementación de AOP en Python, que nos proporciona una manera
+            organizada y consistente de definir y aplicar aspectos ademas de la posibilidad de reutilizar y aplicar
+            estos en distintos puntos de corte de manera efectiva. Tambien soporta múltiples tipos de
+            advice (before, after, around), lo que puede ser más complicado de implementar con decoradores nativos. </p>
+
+
         <h2>
             <h2>
                 <a id="AspectRuby" class="anchor" href="#AspectRuby" aria-hidden="true"><span aria-hidden="true"
@@ -679,10 +690,15 @@
                 INotifyPropertyChanged, o modelos de enhebrado como inmutable o hilo afín.Por lo tanto, los
                 desarrolladores deben escribir toneladas de código repetitivo de bajo nivel que requiere poco ingenio
                 pero que es altamente propenso a errores: el notorio "boilerplate".
-
+            </p>
+            <p>
                 Postsharp, con ayuda de la modularización del paradigma AOP, promete un código más corto y limpio, de
                 fácil mantenimiento y aplicaciones confiables.
-
+            </p>
+            <p>
+                Postsharp soporta varios tipos de advice (OnEntry, OnExit, OnException, Around), permitiendo
+                intervenciones específicas en el flujo de ejecución. Tambien proporciona aspectos predefinidos
+                para tareas comunes como caching, threading, y validación.
             </p>
 
             <h2>
