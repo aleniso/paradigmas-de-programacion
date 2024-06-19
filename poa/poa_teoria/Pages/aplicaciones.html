@@ -114,6 +114,15 @@
         <LI> <h2><ins>Monitoreo del Rendimiento</ins></h2>
             <p align="justify"> Las aplicaciones modernas suelen ser sistemas complejos, multiproceso y distribuidos que utilizan muchos componentes de terceros. En tales sistemas, es difícil detectar (y mucho menos aislar) las causas de los problemas de rendimiento o confiabilidad, especialmente en la producción. Un buen rendimiento es un requisito importante desde el punto de vista comercial. Para cumplir con este requisito, se requiere perfilar la aplicación durante las fases de desarrollo y monitorear el rendimiento después de desplegar la aplicación. AOP permite definir pointcuts que coincidan con los muchos join points en los que se desea supervisar el rendimiento. Luego, se escriben advices que actualicen las estadísticas de rendimiento, los cuales pueden invocarse automáticamente cada vez que se entra o sale de uno de los join points.</p>
         </LI>
+        <LI> <h2><ins>Testing</ins></h2>
+            <p align="justify"> Una gran cantidad de librerías de AOP ofrecen funcionalidades para mocking de datos
+                y la ejecución de pruebas en los joinpoints establecidos. El momento de ejecución de estas pruebas depende del tipo de weaving 
+                y de las características que ofrece cada librería para estas funcionalidades.
+            </p>
+            <p><b>Ejemplo de testing con pythonlib:</b>
+                <img width="100%" src="../Images/testing_aspectlib.png"> </img>
+            </p>
+        </LI>
         </br>    
 		<li> <h2><ins>Software que emplea programación orientada a aspectos.</ins></h2>  
             </br>
@@ -162,34 +171,12 @@
         </p></br>
         <li> <h3><ins>Estrucutra interna y aplicación</ins></h3> 
         <p align="justify">
-            Para implementar aspectos en los objetos de destino, tendremos que crear proxies de ese objetos tipo poa . Esto se logra usando una de dos maneras:
-            <ul>
-                <li>Proxy dinámico JDK: la forma preferida para Spring AOP. Siempre que el objeto de destino implemente incluso una interfaz, se utilizará el proxy dinámico JDK
-                <li>Proxy CGLIB: si el objeto de destino no implementa una interfaz, se puede usar el proxy CGLIB
-            </ul>
-            <img width="500" height="400" src="../Images/springaop-process.webp?raw=true" hspace="150"> </img>
-        </p></br>
-        <li> <h3><ins>JoinPoints</ins></h3> 
-        <p align="justify">
-            No puede aplicarse a clases de tipo final, a metodos estaticos o finales porque no se pueden sobrecargar y resultaria en una runtime excepcion
-        </p></br>
-        <li> <h3><ins>Simplicidad</ins></h3> 
-        <p align="justify">
-            Spring AOP es más simple porque no introduce ningún compilador o weaver adicional en nuestro proceso de compilación. Utiliza el weaver en tiempo de ejecución y, por lo tanto, se integra a la perfección con nuestro proceso de construcción habitual. Aunque parece simple, solo funciona con beans administrados por Spring.
-        </p></br>
-        <b><h1>Spring AOP </h1></b>	
-        <li> <h3><ins>Weaving</ins></h3> 
-        <p align="justify">
-            Usa Runtime weaving durante la ejecución usando proxy dinámico JDK o proxy CGLIB
-        </p></br>
-        <li> <h3><ins>Estrucutra interna y aplicación</ins></h3> 
-        <p align="justify">
             Para implementar aspectos en los objetos de destino, tendremos que crear proxies de ese objetos tipo poa. Esto se logra usando una de dos maneras:
             <ul>
                 <li>Proxy dinámico JDK: la forma preferida para Spring AOP. Siempre que el objeto de destino implemente incluso una interfaz, se utilizará el proxy dinámico JDK
                 <li>Proxy CGLIB: si el objeto de destino no implementa una interfaz, se puede usar el proxy CGLIB
             </ul>
-            <img width="500" height="400" src="../Images/springaop-process.webp?raw=true" hspace="150"> </img>
+            <img width="100%" src="../Images/springaop-process.webp?raw=true" hspace="50"> </img>
         </p></br>
         <li> <h3><ins>JoinPoints</ins></h3> 
         <p align="justify">
